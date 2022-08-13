@@ -1,7 +1,11 @@
 import "./card-list.styles.css";
 import Card from "../card/Card.component";
-const CardList = (props) => {
-    const { filteredMonster } = props;
+import { Monster } from "../../App";
+type CardListProps = {
+    filteredMonster:Monster[];
+}
+const CardList = ({filteredMonster}:CardListProps) => {
+
     return(
         //A good rule of thumb is that elements inside the map() call need keys.
 
